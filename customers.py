@@ -28,3 +28,18 @@ print(customer)
 # Delete the email field
 del customer["email"]
 print(customer)
+
+# Exercise 3: Safe Lookup
+
+# Use .get() to safely look up the deleted email
+print(customer.get("email", "no email on file"))
+
+# Use bracket notation to look up the same key
+try:
+    print(customer["email"])
+except KeyError:
+    print("KeyError: email does not exist")
+
+customer.get("email", "no email on file")
+
+customer["email"]
