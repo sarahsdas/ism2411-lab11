@@ -42,4 +42,23 @@ except KeyError:
 
 customer.get("email", "no email on file")
 
-customer["email"]
+
+
+# Exercise 4: Iterate
+
+# Loop through the dictionary using .items()
+for key, value in customer.items():
+    print(f"{key}: {value}")
+
+# Loop through the dictionary without .items()
+for key in customer:
+    print(key)
+
+# Without .items(), the loop only gives us the keys.
+# With .items(), we can access both the keys and values.
+
+for key, value in customer.items():
+    print(f"{key}: {value}") 
+
+for key in customer:
+    print(key)
