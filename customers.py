@@ -109,3 +109,26 @@ for person in customers:
     final_price = purchase_price * (1 - discount)
 
     print(f"{name} ({tier}): ${final_price:.2f}")
+
+
+# Exercise 7: Nested Product Catalog
+
+# Create a nested dictionary of products
+products = {
+    "P001": {"name": "Laptop", "price": 899.99, "stock": 10},
+    "P002": {"name": "Mouse", "price": 25.50, "stock": 30},
+    "P003": {"name": "Keyboard", "price": 49.99, "stock": 20}
+}
+
+# Print the price of product P002
+print("Price of P002:", products["P002"]["price"])
+
+# Add 5 units to the stock of product P001
+products["P001"]["stock"] += 5
+
+# Print the updated stock
+print("Updated stock of P001:", products["P001"]["stock"])
+
+# Print all products with their prices and stock
+for product_id, details in products.items():
+    print(f"{product_id}: {details['name']} - ${details['price']:.2f}, Stock: {details['stock']}")
