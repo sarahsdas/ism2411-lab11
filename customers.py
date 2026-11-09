@@ -88,3 +88,24 @@ final_price = purchase_price * (1 - discount)
 print("Tier:", tier)
 print("Discount:", discount * 100, "%")
 print("Final Price: $", round(final_price, 2))
+
+
+# Exercise 6: List of Dictionaries
+
+# Create a list of three customers
+customers = [
+    {"name": "Alice", "tier": "platinum"},
+    {"name": "Bob", "tier": "gold"},
+    {"name": "Charlie", "tier": "silver"}
+]
+
+# Calculate the discounted price for each customer
+for person in customers:
+    name = person["name"]
+    tier = person["tier"]
+    discount = tier_discounts.get(tier, 0)
+
+    purchase_price = 300
+    final_price = purchase_price * (1 - discount)
+
+    print(f"{name} ({tier}): ${final_price:.2f}")
