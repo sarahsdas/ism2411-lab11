@@ -132,3 +132,26 @@ print("Updated stock of P001:", products["P001"]["stock"])
 # Print all products with their prices and stock
 for product_id, details in products.items():
     print(f"{product_id}: {details['name']} - ${details['price']:.2f}, Stock: {details['stock']}")
+
+# Exercise 8: Sales by Region
+
+# Create a list of transactions
+transactions = [
+    {"region": "South", "amount": 300},
+    {"region": "North", "amount": 150},
+    {"region": "South", "amount": 200}
+]
+
+# Create an empty dictionary for sales totals
+sales_summary = {}
+
+# Loop through each transaction
+for transaction in transactions:
+    region = transaction["region"]
+    amount = transaction["amount"]
+
+    sales_summary[region] = sales_summary.get(region, 0) + amount
+
+# Print the final summary sorted by region name
+for region in sorted(sales_summary):
+    print(f"{region}: ${sales_summary[region]}")
