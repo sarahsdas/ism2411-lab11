@@ -1,4 +1,10 @@
-#
+#1. I would use .get() when I am unsure if a key exists in a dictionary because it prevents the program from crashing. I would use bracket notation when 
+# I know the key should exist and want to be notified if it is missing. My rule of thumb is to use .get() for optional information and bracket notation for 
+# required information.
+#2. Creating a summary dictionary in Python reminds me of using PivotTables in Excel because both organize data into categories and calculate totals. Python 
+# can be more useful for larger datasets because it can automatically process large amounts of information using loops. This makes analyzing data more 
+# efficient and reduces the need for manual calculations.
+
 # Exercise 1: One Customer
 
 customer = {
